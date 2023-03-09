@@ -10,9 +10,9 @@ function MoviesCard(props) {
         <Card.Body>
           <Card.Title>{props.data.title}</Card.Title>
           <Card.Text>{props.data.description}</Card.Text>
-          <Link to={{ pathname: "/new-page", state: { data: props.data } }}>
+          {/* <Link to={{ pathname: "/new-page", state: { data: props.data } }}>
             <Button variant="primary">Go somewhere</Button>
-          </Link>
+          </Link> */}
         </Card.Body>
       </Card>
     </>
