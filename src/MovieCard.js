@@ -3,8 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import { Link } from "react-router-dom";
 
 function MoviesCard(props) {
+  //   const handleClick = (e) => {};
   return (
-    <Card className="m-3 p-0" style={{ width: "18rem" }}>
+    <Card
+      //   onClick={handleClick(props.data.handleClick)}
+      className="m-3 p-0"
+      style={{ width: "18rem" }}
+    >
       <Card.Img variant="top" src={props.data.image} />
       <Card.Body>
         <Card.Title>{props.data.title}</Card.Title>

@@ -1,10 +1,11 @@
 import "./App.css";
 import axios from "axios";
 import { useState } from "react";
-import { Container, Row } from "react-bootstrap";
-import { data } from "./data";
-import MoviesCard from "./MovieCard";
+
 import Movies from "./Movies";
+import Manubar from "./Manubar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AboutMovie from "./AboutMovie";
 
 function App() {
   // const [data, setData] = useState([]);
@@ -31,7 +32,14 @@ function App() {
 
   return (
     <>
+      <Manubar />
       <Movies />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Movies />}></Route>
+          <Route path="/about" element={<AboutMovie />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
