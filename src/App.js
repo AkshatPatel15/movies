@@ -2,10 +2,10 @@ import "./App.css";
 import axios from "axios";
 import { useState } from "react";
 
-import Movies from "./Movies";
-import Manubar from "./Manubar";
+import Movies from "./template/Movies";
+import Manubar from "./template/Manubar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AboutMovie from "./AboutMovie";
+import AboutMovie from "./template/AboutMovie";
 
 function App() {
   // const [data, setData] = useState([]);
@@ -33,7 +33,6 @@ function App() {
   return (
     <>
       <Manubar />
-      <Movies />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Movies />}></Route>
