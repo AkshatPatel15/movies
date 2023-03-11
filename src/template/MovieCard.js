@@ -6,17 +6,20 @@ function MoviesCard(props) {
   console.log(props.data);
   const history = useNavigate();
 
-  const handleClick = () => {
-    // Code to run when the component is clicked
-    // Pass data to the new page using the `state` property of the location object
-    history("/about", { data: props.data });
+  const handleClick = (id) => {
+    history(`/about${id}`);
   };
+  // function handleClick(id) {
+  //   const navigate = useNavigate();
+  //   navigate(`/about/${id}`);
+  // }
   return (
     <>
       <Card
+        id={props.data.imdbid}
         className="m-3 p-0"
         style={{ width: "18rem" }}
-        onClick={handleClick}
+        onClick={handleClick(props.data.imdbid)}
       >
         <Card.Img variant="top" src={props.data.image} />
         <Card.Body>

@@ -36,7 +36,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Movies />}></Route>
-          <Route path="/about" element={<AboutMovie />}></Route>
+          <Route path="/about/:id" element={<AboutMovie />}></Route>
         </Routes>
       </BrowserRouter>
     </>

@@ -21,13 +21,15 @@ function Movies(props) {
 
   return (
     <>
-      <Container className="">
+      <Container>
         <Row className="justify-content-md-center m-3">
           {slicedData.map((item) => (
-            <MoviesCard data={item} />
+            <MoviesCard id={data.imdbid} data={item} />
           ))}
         </Row>
       </Container>
+
+      {/* pagination */}
       <Pagination className="justify-content-md-center">
         <Pagination.First onClick={() => handlePageChange(1)} />
         <Pagination.Prev
